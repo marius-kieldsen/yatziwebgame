@@ -13,3 +13,13 @@
     align-items: center;
     gap: 8px;
 }
+
+.dice-section, point-section {
+    border-radius: 8px;
+    border: 1px, solid;
+    padding: 20px;
+}
+
+input {
+    max-width: 50px;
+}
