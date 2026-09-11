@@ -1,17 +1,11 @@
-
-
 let values = [0, 0, 0, 0, 0];
-
 let throwCount = 0; 
 
-
 let random = Math.floor(Math.random()* 6) +1;
-console.log(random);
 
-function getvalues () {
+function getValues () {
     return values;
 }
-
 
 function getThrowCount() {
     return throwCount;
@@ -54,13 +48,13 @@ function getResults() {
 
 
 function frequency() {
-    let frequency = [0,0,0,0,0,0,0]; 
+    let freq = [0,0,0,0,0,0,0]; 
     for (let v of values) {
         if (v >= 1 && v <= 6) {
-            frequency[v]++;
+            freq[v]++;
         } 
     }
-        return frequency
+        return freq
 }
 
 function sameValuePoints(value) {
@@ -68,10 +62,10 @@ function sameValuePoints(value) {
 }
 
 function onePairPoints() {
-    let frequency = frequency(); 
+    let freq = frequency(); 
     let points = 0;
     for (let i = 6; i >= 1; i--) {
-        if(frequency[i] >= 2 && points == 0) {
+        if(freq[i] >= 2 && points == 0) {
             points = i *2; 
         }     
     }
@@ -80,11 +74,11 @@ function onePairPoints() {
 
 
 function twoPairPoints() {
-    let frequency = frequency(); 
+    let freq = frequency(); 
     let points = 0; 
     let pairs = 0; 
     for (let i = 6; i >= 1; i--) {
-        if (frequency[i] >= 2) {
+        if (freq[i] >= 2) {
             points += i * 2 ; 
             pairs++;
         }
@@ -96,10 +90,10 @@ function twoPairPoints() {
 }
 
 function threeSamePoints() {
-    let frequency = frequency(); 
+    let freq = frequency(); 
     let points = 0; 
     for (let i = 6; i >= 1; i--) {
-        if (frequency[i] >= 3 && points == 0 )  {
+        if (freq[i] >= 3 && points == 0 )  {
             points = i * 3;
         }
     }
@@ -108,10 +102,10 @@ function threeSamePoints() {
 
 
 function fourSamePoints() {
-        let frequency = frequency(); 
+        let freq = frequency(); 
     let points = 0; 
     for (let i = 6; i >= 1; i--) {
-        if (frequency[i] >= 4 && points == 0 )  {
+        if (freq[i] >= 4 && points == 0 )  {
             points = i * 4;
         }
     }
@@ -119,14 +113,14 @@ function fourSamePoints() {
 }
 
 function fullHousePoints() {
-    let frequency = frequency(); 
+    let freq = frequency(); 
     let three = 0; 
     let two = 0; 
 
     for (let i = 6; i >= 1; i--) {
-        if (frequency[i] == 3) {
+        if (freq[i] == 3) {
             three = i; 
-        } else if (frequency[i] == 2) {
+        } else if (freq[i] == 2) {
             two = i; 
         }
     }
@@ -137,8 +131,8 @@ function fullHousePoints() {
 }
 
 function smallStraightPoints() {
-    let frequency = frequency();
-    if (frequency[1]==1 && frequency[2] == 1 && frequency[3]== 1 && frequency[4] ==1 &&frequency[5]==1) {
+    let freq = frequency();
+    if (freq[1]==1 && freq[2] == 1 && freq[3]== 1 && freq[4] ==1 &&freq[5]==1) {
         return 15;
     }
     return 0; 
@@ -146,27 +140,27 @@ function smallStraightPoints() {
 
 
 function largeStraightPoints() {
-    let frequency = frequency(); 
-    if (frequency[2]==1 && frequency[3]==1 && frequency[4]==1 && frequency[5]==1 && frequency[6]==1 ) {
+    let freq = frequency(); 
+    if (freq[2]==1 && freq[3]==1 && freq[4]==1 && freq[5]==1 && freq[6]==1 ) {
         return 20;
     }
     return 0;
 }
 
 function chancePoints() {
-    let frequency = frequency(); 
+    let freq = frequency(); 
     let points = 0; 
     for (let i = 1; i <= 6; i++) {
-        points += i*frequency[i];
+        points += i*freq[i];
     } 
     return points;
 }
 
 
 function yatzyPoints() {
-    let frequency = frequency(); 
+    let freq = frequency(); 
     for (let i = 1; i <= 6; i++) {
-        if (frequency[i]==5) {
+        if (freq[i]==5) {
             return 50;
         }
     }
