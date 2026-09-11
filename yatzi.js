@@ -55,7 +55,7 @@ function getResults() {
 
 function frequency() {
     let frequency = [0,0,0,0,0,0,0]; 
-    for (v of values) {
+    for (let v of values) {
         if (v >= 1 && v <= 6) {
             frequency[v]++;
         } 
@@ -71,7 +71,7 @@ function onePairPoints() {
     let frequency = frequency(); 
     let points = 0;
     for (let i = 6; i >= 1; i--) {
-        if(frequency[i] > 2 && points == 0) {
+        if(frequency[i] >= 2 && points == 0) {
             points = i *2; 
         }     
     }
@@ -159,7 +159,7 @@ function chancePoints() {
     for (let i = 1; i <= 6; i++) {
         points += i*frequency[i];
     } 
-    return 0;
+    return points;
 }
 
 
@@ -169,6 +169,6 @@ function yatzyPoints() {
         if (frequency[i]==5) {
             return 50;
         }
-        return 0;
     }
+     return 0;
 }
