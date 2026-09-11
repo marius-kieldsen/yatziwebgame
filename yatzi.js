@@ -145,4 +145,30 @@ function smallStraightPoints() {
 }
 
 
+function largeStraightPoints() {
+    let frequency = frequency(); 
+    if (frequency[2]==1 && frequency[3]==1 && frequency[4]==1 && frequency[5]==1 && frequency[6]==1 ) {
+        return 20;
+    }
+    return 0;
+}
 
+function chancePoints() {
+    let frequency = frequency(); 
+    let points = 0; 
+    for (let i = 1; i <= 6; i++) {
+        points += i*frequency[i];
+    } 
+    return 0;
+}
+
+
+function yatzyPoints() {
+    let frequency = frequency(); 
+    for (let i = 1; i <= 6; i++) {
+        if (frequency[i]==5) {
+            return 50;
+        }
+        return 0;
+    }
+}
