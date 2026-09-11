@@ -25,7 +25,7 @@ rollBtn.addEventListener("click", () => {
     } else {
         throwDice(holds);
         updateDice();
-        updatePreview();
+        updatePreview
     }
 });
 
