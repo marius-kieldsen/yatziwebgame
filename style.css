@@ -1,3 +1,250 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: row;
+}
+
+main{
+    width: 450px;
+
+    margin-top: 20px;
+
+    margin-top: 25px 30px;
+
+    background: linear-gradient(
+        #f1f6c7
+        #ffe2c4
+    );
+}
+
+.dice-section{
+    border: 1px solid #aeb84d;
+
+    padding: 30px;
+
+    min-height: 205px;
+}
+
+.dice-wrapper {
+    justify-content: center;
+
+    gap: 6px;
+}
+
+.dice-wrapper img{
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    box-shadow: 
+    0 3px 4px rgba(0, 0, 0, 0.25);
+
+    transition: 
+    transform 0.15s,
+    box-shadow 0.15s;
+
+}
+
+.dice-wrapper img:hover {
+    transform: translateY(-2px);
+    box-shadow:
+    0 5px 7px rgba(0, 0, 0, 0.3);
+}
+
+.dice-wrapper img.held {
+    transform: translateY(-8px);
+
+    outline: 3px solid #7fa83c;
+
+    outline-offset: 2px;
+
+}
+
+.roll-container {
+    margin-top: 32px;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.roll-container {
+    font-size: 16px;
+}
+
+#roll-btn {
+    width: 100px;
+    height: 50px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    border:1 solid #999;
+
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        #e1e1e1
+
+
+    );
+
+}
+
+#roll-btn:hover {
+    background: #eeeeee;
+}
+
+#roll-btn:active {
+    transform: translateY(1px);
+}
+
+.point-section {
+    border: 1px solid #aeb84d;
+
+    padding: 15px 12px;
+
+    min-height: 420px;
+
+}
+
+.point-wrapper {
+    min-height: 27px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+}
+
+.point-wrapper > label:first-child {
+    width: 128px;
+
+    cursor: pointer;
+}
+
+.point-wrapper input {
+    width: 42px;
+    height: 20px;
+
+    padding: 1px 4px;
+
+    border: 1px solid #aaa;
+
+    background-color: white;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+}
+
+.point-wrapper input[type="number"]::-webkit-inner-spin-button,
+.point-wrapper input[type="number"]::-webkit-outer-spin-button{
+    appearance: none;
+    margin: 0;
+}
+
+
+.point-wrapper input[type="number"] {
+    appearance: textfield;
+
+
+}
+
+#seksere {
+    margin-right: 8px;
+}
+
+
+label [for="sum"] {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+#sum {
+    margin-right: 8px;
+}
+
+label[for="bonus"] {
+    margin-right: 5px;
+}
+
+label[for="total"] {
+    margin-left: auto;
+
+    margin-right: 5px;
+}
+
+.point-wrapper input.selected {
+    background-color: #fff1a3;
+
+    font-weight: bold;
+}
+
+.point-wrapper input.used {
+    background-color: #eeeeee;
+
+    font-weight: bold;
+
+    cursor: default;
+}
+
+
+@media (max-width: 500px) {
+    main {
+        width: 95%;
+
+        padding: 20px;
+    }
+    .dice-wrapper {
+        gap: 4px;
+    }
+
+    .dice-wrapper img {
+        width: 50px;
+        height: 50px;
+
+
+    }
+
+    .point-wrapper > label :first-child{
+    width: 115px;
+    }
+}
+
+
+
+
+
+
+
+
 .flex-row {
     display: flex;
     flex-direction: row;    
