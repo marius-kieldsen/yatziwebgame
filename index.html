@@ -12,43 +12,48 @@
         
         <section class="dice-section flex-column">
             <div class="dice-wrapper flex-row">
-                <img src="assets/die-one.svg" alt="">
-                <img src="assets/die-two.svg" alt="">
-                <img src="assets/die-three.svg" alt="">
-                <img src="assets/die-four.svg" alt="">
-                <img src="assets/die-five.svg" alt="">
+                <img class="die-image" src="assets/die-one.svg" alt="die one">
+                <img class="die-image" src="assets/die-two.svg" alt="die two">
+                <img class="die-image" src="assets/die-three.svg" alt="die three">
+                <img class="die-image" src="assets/die-four.svg" alt="die four">
+                <img class="die-image" src="assets/die-five.svg" alt="die five">
             </div>  
 
             <div class="roll-container flex-row">
-                <span>Turn 1</span>
+                <span id="turn-label">Turn 1</span>
                 <Button type="button" id="roll-btn">Roll!</Button>
             </div>
         </section>
 
         <section class="point-section flex-column">
             <div class="point-wrapper">
-                <label for="ener">1-s</label>
-                <input readonly type="number" id="ener">
+                <label for="ones">1-s</label>
+                <input readonly type="number" id="ones">
             </div>
             <div class="point-wrapper">
-                <label for="toer">2-s</label>
-                <input readonly type="number" id="toer">
+                <label for="twos">2-s</label>
+                <input readonly type="number" id="twos">
             </div>
             <div class="point-wrapper">
-                <label for="treer">3-s</label>
-                <input readonly type="number" id="treer">
+                <label for="threes">3-s</label>
+                <input readonly type="number" id="threes">
             </div>
             <div class="point-wrapper">
-                <label for="firere">4-s</label>
-                <input readonly type="number" id="firere">
+                <label for="fours">4-s</label>
+                <input readonly type="number" id="fours">
             </div>
             <div class="point-wrapper">
-                <label for="femere">5-s</label>
-                <input readonly type="number" id="femere">
+                <label for="fives">5-s</label>
+                <input readonly type="number" id="fives">
             </div>
             <div class="point-wrapper wide-row">
                 <label for="seksere">6-s</label>
                 <input readonly type="number" id="seksere">
+=======
+            <div class="point-wrapper">
+                <label for="sixes">6-s</label>
+                <input readonly type="number" id="sixes">
+>>>>>>> e1f308682c7713750a04439da36e5e27792b0412
                 <label for="sum">Sum:</label>
                 <input readonly type="number" id="sum">
                 <label for="bonus">Bonus:</label>
@@ -95,5 +100,8 @@
             </div>
         </section>
     </main>
+
+    <script src="yatzi.js"></script>
+    <script src="gui.js"></script>
 </body>
 </html>
