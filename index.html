@@ -12,15 +12,15 @@
         
         <section class="dice-section flex-column">
             <div class="dice-wrapper flex-row">
-                <img src="assets/die-one.svg" alt="">
-                <img src="assets/die-two.svg" alt="">
-                <img src="assets/die-three.svg" alt="">
-                <img src="assets/die-four.svg" alt="">
-                <img src="assets/die-five.svg" alt="">
-            </div>  
+                <img class="die-image" src="assets/die-one.svg" alt="die showing one">
+                <img class="die-image" src="assets/die-two.svg" alt="die showing two">
+                <img class="die-image" src="assets/die-three.svg" alt="die showing three">
+                <img class="die-image" src="assets/die-four.svg" alt="die showing four">
+                <img class="die-image" src="assets/die-five.svg" alt="die showing five">
+            </div>
 
             <div class="roll-container flex-row">
-                <span>Turn 1</span>
+                <span id="turn-label">Turn 1</span>
                 <Button type="button" id="roll-btn">Roll!</Button>
             </div>
         </section>
@@ -95,5 +95,8 @@
             </div>
         </section>
     </main>
+
+    <script src="yatzi.js"></script>
+    <script src="gui.js"></script>
 </body>
 </html>

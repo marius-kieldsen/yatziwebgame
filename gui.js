@@ -1,23 +1,40 @@
+const category = [
+    { id: "ones", index: 0},
+    { id: "twos", index: 1 },
+    { id: "threes", index: 2 },
+    { id: "fours", index: 3 },
+    { id: "fives", index: 4 },
+    { id: "sixes", index: 5 },
+    { id: "onePair", index: 6 },
+    {id: "twoPair", index: 7 },
+    { id: "threeOfAKind", index: 8 },
+    { id: "fourOfAKind", index: 9 },
+    { id: "fullHouse", index: 10 },
+    { id: "smallStraight", index: 11 },
+    { id: "largeStraight", index: 12 },
+    { id: "yatzy", index: 13 },
+    { id: "chance", index: 14 }
+];
 
-function rollAction() {
-       throwDice(getHolds());
-    let values = getvalues();
-    let throwCount = getThrowCount;
+const dieImages = ["assets/die-one.svg", "assets/die-two.svg", "assets/die-three.svg", "assets/die-four.svg", "assets/die-five.svg"];
+const maxTurns = 15;
 
-    updateRolled(); 
+let holds = [false, false, false, false, false];
 
-    if (throwCount == 3) {
-        //disable my button
-        disableHolds(); 
+
+const dice = document.querySelectorAll(".die-image"); // array 
+const rollBtn = document.getElementById("roll-btn");
+const turnLabel =document.getElementById("turn-label")
+
+
+rollBtn.addEventListener("click", () => {
+    if (getThrowCount() >= 3) {
+        alert("YOU GOAT, YOU ALREADY ROLLED 3 TIMES")
+    } else {
+        throwDice(holds);
     }
-    else if (throwCount ==1 ) {
-        enableHolds();
-        enableResults();
-    }
-    for (let i = 0; i<values.length; i++) {
-        let die = document.getElementById("die" + (i+1));
-        die.innerHTML = values[i];
-    }
-}
+});
 
-
+dieImages.forEach((element, i) => {
+    dice[i].src = dieImages[values[i]];
+});
