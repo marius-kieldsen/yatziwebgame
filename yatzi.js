@@ -1,8 +1,6 @@
 let values = [0, 0, 0, 0, 0];
 let throwCount = 0; 
 
-let random = Math.floor(Math.random()* 6) +1;
-
 function getValues () {
     return values;
 }
